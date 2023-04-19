@@ -15,15 +15,19 @@ FIN
 
 let valor1 = parseInt(prompt("Ingrese un número"));
 let valor2 = parseInt(prompt("Ingrese otro número"));
-if( valor1 == valor2){
-  alert(`${valor1} = ${valor2}`)
-  console.log(`${valor1} = ${valor2}`)
 
-}else if(valor1 > valor2){
-  alert(`${valor1} > ${valor2}`)
-  console.log(`${valor1} > ${valor2}`)
-
-}else {
-  alert(`${valor1} < ${valor2}`)
-  console.log(`${valor1} < ${valor2}`)
+if(Number.isInteger(valor1) && Number.isInteger(valor2) ){  
+  if( valor1 == valor2){
+    alert(`${valor1} = ${valor2}`)
+    console.log(`${valor1} = ${valor2}`)  
+  }else if(valor1 > valor2){
+    alert(`${valor1} > ${valor2}`)
+    console.log(`${valor1} > ${valor2}`)  
+  }else {
+    alert(`${valor1} < ${valor2}`)
+    console.log(`${valor1} < ${valor2}`)
+  }
+}else{
+  alert("Error,los valores proporcionados no son válidos, fin del programa"); 
 }
+
